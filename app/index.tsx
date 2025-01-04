@@ -17,10 +17,9 @@ import Game from "./game";
 import Quotes from "./quotes";
 import { Calendar } from "react-native-calendars";
 import { Image } from "react-native";
+import { API_KEY } from '@env';
 
-const API_KEY = "2e45dbdce2f8619be510b8ab0fe82f06"; // OpenWeather API 키
-const WEATHER_API_URL =
-  "https://api.openweathermap.org/data/2.5/weather?q=Seoul&units=metric&appid=";
+const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/weather?q=Seoul&units=metric&appid=${API_KEY}`;
 
 export default class App extends React.Component {
   state = {
